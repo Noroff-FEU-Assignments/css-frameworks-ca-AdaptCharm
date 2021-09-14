@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.css'
+
 import { FC, useEffect } from 'react'
 import type { AppProps } from 'next/app'
 
