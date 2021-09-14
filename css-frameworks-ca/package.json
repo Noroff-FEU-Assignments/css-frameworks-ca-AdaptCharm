@@ -10,10 +10,11 @@
     "find:unused": "next-unused"
   },
   "dependencies": {
-    "bootstrap": "^5.0.0-beta3",
+    "bootstrap": "5.1.0",
     "next": "11.1.2",
     "next-seo": "^4.26.0",
     "react": "17.0.2",
+    "react-bootstrap": "^2.0.0-beta.6",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
