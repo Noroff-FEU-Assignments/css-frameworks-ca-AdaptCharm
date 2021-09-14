@@ -1,0 +1,17 @@
+{
+  "title": "Home",
+  "titleTemplate": "%s | CSS Frameworks CA",
+  "defaultTitle": "CSS Frameworks CA",
+  "description": "The CSS Frameworks Course Assignment.",
+  "openGraph": {
+    "type": "website",
+    "locale": "en",
+    "url": "https://noroff-css-frameworks-ca.vercel.app",
+    "site_name": "CSS Frameworks CA"
+  },
+  "twitter": {
+    "handle": "@css-frameworks-ca",
+    "site": "@css-frameworks-ca",
+    "cardType": "summary_large_image"
+  }
+}
