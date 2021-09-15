@@ -1,7 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.css'
+import '@assets/main.scss'
 
 import { FC, useEffect } from 'react'
 import type { AppProps } from 'next/app'
+
+// ! https://giters.com/react-bootstrap/react-bootstrap/issues/6026#issuecomment-917044627
+import { SSRProvider } from '@restart/ui/ssr'
 
 import { Head } from '@components/common'
 
@@ -15,12 +18,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   }, [])
 
   return (
-    <>
+    <SSRProvider>
       <Head />
       <Layout pageProps={pageProps}>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </SSRProvider>
   )
 }
 
