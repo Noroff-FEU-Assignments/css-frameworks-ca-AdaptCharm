@@ -4,7 +4,6 @@ import { useKeenSlider } from 'keen-slider/react'
 
 import Link from 'next/link'
 import Image from 'next/image'
-import cn from 'classnames'
 
 const slides = [
   {
@@ -31,7 +30,6 @@ const slides = [
 ]
 
 const Carousel: FC = () => {
-  const [isCurrent, setIsCurrent] = useState(0)
   const [isActive, setIsActive] = useState(false)
   const postSliderRef = useRef<HTMLDivElement>(null)
 
@@ -39,9 +37,6 @@ const Carousel: FC = () => {
     slidesPerView: 1,
     loop: true,
     mounted: () => setIsActive(true),
-    slideChanged(x) {
-      setIsCurrent(x.details().relativeSlide)
-    },
   })
 
   useEffect(() => {
@@ -78,7 +73,7 @@ const Carousel: FC = () => {
             {slides.map((s) => (
               <div className='keen-slider__slide' key={s.id}>
                 <Link href='#' scroll={false}>
-                  <a className='flex flex-col rounded-2xl transition ease-default duration-400 overflow-hidden'>
+                  <a className='flex flex-col transition ease-default duration-400 overflow-hidden'>
                     <div className='relative flex-shrink-0 w-full h-[462px]'>
                       <Image
                         src={s.image.url}
@@ -86,7 +81,6 @@ const Carousel: FC = () => {
                         layout='fill'
                         objectFit='cover'
                       />
-                      <div className='absolute inset-0 bg-black opacity-50'></div>
                     </div>
                   </a>
                 </Link>
@@ -96,25 +90,17 @@ const Carousel: FC = () => {
         </div>
       </div>
       {slider && (
-        <div className='hidden relative sm:flex sm:items-center sm:justify-center sm:mt-12'>
+        <div className='absolute inset-x-0 bottom-8 md:bottom-[31px] flex justify-center space-x-4'>
           {[...Array(slider.details().size).keys()].map((idx) => {
             return (
               <button
                 aria-label='Position indicator'
                 key={idx}
-                className={cn('p-2 rounded-full focus:outline-none', {
-                  'bg-black': isCurrent === idx,
-                })}
+                className='w-[30px] h-[30px] bg-primary odd:bg-white rounded-sm shadow'
                 onClick={() => {
                   slider.moveToSlideRelative(idx)
                 }}
-              >
-                <div
-                  className={cn('bg-black w-3 h-3 transition rounded-full', {
-                    'bg-white': isCurrent === idx,
-                  })}
-                />
-              </button>
+              ></button>
             )
           })}
         </div>
