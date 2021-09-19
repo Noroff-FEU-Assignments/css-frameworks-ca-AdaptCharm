@@ -1,0 +1,59 @@
+{
+  "name": "noroff-css-frameworks-ca",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "analyze": "BUNDLE_ANALYZE=both yarn build",
+    "find:unused": "next-unused"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
+    "autoprefixer": "^10.3.4",
+    "keen-slider": "^5.5.1",
+    "next": "11.1.2",
+    "next-seo": "^4.27.0",
+    "postcss": "^8.3.6",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-tabs": "^3.2.2",
+    "tailwindcss": "^2.2.15"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^11.1.2",
+    "@types/classnames": "^2.3.1",
+    "@types/react": "17.0.21",
+    "@types/react-tabs": "^2.3.3",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "next-unused": "^0.0.6",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "typescript": "4.4.3"
+  },
+  "next-unused": {
+    "alias": {
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ]
+    },
+    "debug": true,
+    "include": [
+      "components",
+      "pages"
+    ],
+    "exclude": [],
+    "entrypoints": [
+      "pages"
+    ]
+  }
+}
