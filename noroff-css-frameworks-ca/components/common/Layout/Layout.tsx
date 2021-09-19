@@ -5,7 +5,7 @@ const Layout: FC = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className='flex-shrink-0'>{children}</main>
+      <main className='flex-shrink-0 pt-[70px]'>{children}</main>
       <Footer />
     </>
   )

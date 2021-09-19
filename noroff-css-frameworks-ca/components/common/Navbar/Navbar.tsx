@@ -55,7 +55,7 @@ const _Navbar: FC = () => {
   return (
     <div
       className={cn(
-        'relative z-10 w-full md:w-auto bg-accents-1 md:shadow-none',
+        'absolute md:relative z-10 w-full md:w-auto bg-accents-1 md:shadow-none',
         {
           'shadow-4': mobileMenu,
         }
