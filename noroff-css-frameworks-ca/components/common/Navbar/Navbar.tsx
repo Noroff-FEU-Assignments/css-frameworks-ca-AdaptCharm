@@ -84,7 +84,7 @@ const _Navbar: FC = () => {
               </label>
               <div className='flex'>
                 <input
-                  id='search'
+                  id='search-primary'
                   className='border-transparent w-[202px] bg-white rounded-tl rounded-bl py-[5px] pl-[19px] pr-3 text-[0.9375rem] placeholder-accents-5 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-0 focus:ring-primary focus:border-primary'
                   placeholder='Search'
                   type='search'
@@ -127,8 +127,7 @@ const _Navbar: FC = () => {
           </label>
           <div className='flex pl-[31px] pr-[30px]'>
             <input
-              id='search'
-              name='search'
+              id='search-secondary'
               className='border-transparent w-full bg-white rounded-tl rounded-bl py-2 pl-[19px] pr-3 text-[0.9375rem] placeholder-accents-5 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-0 focus:ring-primary focus:border-primary'
               placeholder='Search'
               type='search'
